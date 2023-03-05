@@ -4,12 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pociąg do podróży</title>
 </head>
 <body>
-  <h1>Flight Booking</h1>
-  <div>
-    <img src="./assets/img/sample.jpg">
-  </div>
+  <main>
+    <section class="trip-planner">
+      <h2>Zaplanuj podróż</h2>
+      <form id="">
+        <div class="input-group start-select">
+          <label for="start">
+            Wybierz stację początkową:
+          </label>
+          <input type="text" list="start-stations" id="start" name="start" onkeyup="processChangesForStart()">
+          <datalist id="start-stations"></datalist>
+        </div>
+        <div class="input-group dest-select">
+          <label for="dest">
+            Wybierz stację docelową:
+          </label>
+          <input type="text" list="dest-stations" id="dest" name="dest" onkeyup="processChangesForDest()">
+          <datalist id="dest-stations"></datalist>
+        </div>
+        <div class="input-group">
+          <label for="numSeats">Liczba pasażerów:</label>
+          <input type="number" id="numSeats" name="numSeats" value="1">
+        </div>
+        <div class="input-group">
+          <label for="avoidChanges">Unikaj przesiadek</label>
+          <input type="checkbox" id="avoidChanges" name="avoidChanges">
+        </div>
+        <div>
+          <button type="submit" id="search">Wyszukaj połączenia</button>
+        </div>
+      </form>
+    </section>
+  </main>
 </body>
 </html>
