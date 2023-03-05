@@ -1,5 +1,43 @@
+@import './variables.scss';
+
 body {
-  h1 {
-    color: darkgray;
+  background-color: $backgroud-color;
+}
+
+#content {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding-default;
+  background-color: white;
+  margin-bottom: 15px;
+
+  nav {
+    ul {
+      list-style: none;
+      
+      li {
+        display: inline-block;
+        margin: 0 5px;
+  
+        a {
+          text-decoration: none;
+          color: black;
+          padding: 10px $padding-default;
+        }
+      }
+    }
   }
+}
+
+.trip-planner {
+  background-color: white;
+  width: 80vw;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: $padding-default;
 }

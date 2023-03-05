@@ -8,6 +8,7 @@ const startStationInput = document.querySelector('input#start');
 const startStationsDatalist = document.querySelector('datalist#start-stations');
 const destStationInput = document.querySelector('input#dest');
 const destStationsDatalist = document.querySelector('datalist#dest-stations');
+const datetimeInput = document.querySelector('input#trip-datetime');
 
 const processChangesForStart = helpers.debounce(() => {
   const query = startStationInput.value;
@@ -45,4 +46,10 @@ destStationInput.addEventListener('input', () => {
       break;
     }
   }
+});
+
+window.addEventListener('load', () => {
+  const ts = new Date();
+  const date = ts.toISOString().split('T')[0];
+  datetimeInput.min = `${date}T00:00:00`;
 });
